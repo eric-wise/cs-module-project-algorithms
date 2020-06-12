@@ -2,10 +2,14 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def moving_zeroes(arr):
-    # Your code here
 
-    pass
+
+def moving_zeroes(arr):
+    for index, i in enumerate(arr):
+        if arr[index] != 0:
+            arr.insert(0, arr.pop(index))
+
+    return arr
 
 
 if __name__ == '__main__':
